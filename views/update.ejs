@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('navbar') %>
+    <h1>Update Your Task</h1>
+    <div class="container">
+        <form action="/update/<%= task._id %>" method="post">
+            <input class="text" value="<%= task.task %>" name="task" placeholder="Enter Your Task" required>
+            <br><br>
+
+            <textarea class="textarea" name="description" id="" placeholder="Enter Task Description" required><%= task.description %></textarea>
+            <br><br>
+            <button type="submit">Update Task</button>
+        </form>
+    </div>
+    
+</body>
+</html>
